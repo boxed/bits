@@ -1,7 +1,7 @@
 from PIL import Image
 
-h = 2_000_000
-w = 19
+h = 12_000_000
+w = 22
 img = None
 pixels = None
 c = 0

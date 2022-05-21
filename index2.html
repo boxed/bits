@@ -1,0 +1,255 @@
+<html>
+<head>
+    <title>
+        Bits
+    </title>
+
+    <style>
+        img {
+            display: block;
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body style="background: black">
+
+<!--
+
+from PIL import Image
+
+h = 2_000_000
+w = 19
+img = None
+pixels = None
+c = 0
+
+for y in range(h):
+    if y % 20_000 == 0:
+        if img is not None:
+            img = img.convert('P')
+            img.save(f'{c}.png')
+            print(f'<img src="{c}.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">')
+            c += 1
+
+        img = Image.new(mode='RGB', size=(w, 20_000), color=0xFF_FF_FF)
+        pixels = img.load()
+
+    for x, b in enumerate(f'{y:b}'.zfill(w)):
+        pixels[(x, y % 20_000)] = 0x00_00_00 if b == '0' else 0xFF_FF_00
+
+-->
+
+
+<div style="text-align: right">
+<img src="0.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="1.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="2.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="3.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="4.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="5.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="6.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="7.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="8.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="9.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="10.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="11.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="12.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="13.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="14.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="15.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="16.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="17.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="18.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="19.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="20.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="21.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="22.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="23.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="24.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="25.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="26.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="27.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="28.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="29.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="30.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="31.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="32.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="33.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="34.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="35.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="36.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="37.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="38.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="39.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="40.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="41.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="42.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="43.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="44.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="45.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="46.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="47.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="48.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="49.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="50.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="51.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="52.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="53.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="54.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="55.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="56.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="57.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="58.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="59.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="60.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="61.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="62.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="63.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="64.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="65.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="66.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="67.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="68.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="69.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="70.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="71.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="72.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="73.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="74.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="75.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="76.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="77.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="78.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="79.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="80.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="81.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="82.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="83.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="84.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="85.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="86.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="87.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="88.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="89.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="90.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="91.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="92.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="93.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="94.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="95.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="96.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="97.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="98.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="99.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="100.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="101.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="102.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="103.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="104.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="105.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="106.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="107.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="108.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="109.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="110.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="111.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="112.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="113.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="114.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="115.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="116.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="117.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="118.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="119.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="120.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="121.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="122.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="123.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="124.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="125.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="126.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="127.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="128.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="129.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="130.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="131.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="132.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="133.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="134.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="135.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="136.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="137.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="138.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="139.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="140.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="141.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="142.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="143.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="144.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="145.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="146.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="147.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="148.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="149.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="150.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="151.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="152.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="153.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="154.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="155.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="156.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="157.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="158.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="159.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="160.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="161.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="162.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="163.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="164.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="165.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="166.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="167.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="168.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="169.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="170.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="171.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="172.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="173.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="174.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="175.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="176.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="177.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="178.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="179.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="180.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="181.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="182.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="183.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="184.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="185.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="186.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="187.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="188.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="189.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="190.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="191.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="192.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="193.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="194.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="195.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="196.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="197.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="198.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="199.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="200.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="201.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="202.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="203.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="204.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="205.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="206.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="207.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="208.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+</div>
+</body>
+</html>
