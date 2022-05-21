@@ -3,6 +3,13 @@
     <title>
         Bits
     </title>
+
+    <style>
+        img {
+            display: block;
+            margin-left: auto;
+        }
+    </style>
 </head>
 <body style="background: black">
     
@@ -10,23 +17,56 @@
 
 from PIL import Image
 
-h = 200000
+h = 2_000_000
 w = 19
-img = Image.new(mode='RGB', size=(w, h), color=0xFF_FF_FF)
-
-pixels = img.load()
+img = None
+pixels = None
+c = 0
 
 for y in range(h):
-    for x, b in enumerate(f'{y:b}'.zfill(w)):
-        pixels[(x, y)] = 0x00_00_00 if b == '0' else  0xFF_FF_00
+    if y % 20_000 == 0:
+        if img is not None:
+            img = img.convert('P')
+            img.save(f'{c}.png')
+            print(f'<img src="{c}.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">')
+            c += 1
 
-img = img.convert('P')
-img.show()
+        img = Image.new(mode='RGB', size=(w, 20_000), color=0xFF_FF_FF)
+        pixels = img.load()
+
+    for x, b in enumerate(f'{y:b}'.zfill(w)):
+        pixels[(x, y % 20_000)] = 0x00_00_00 if b == '0' else 0xFF_FF_00
     
 -->
+
     
 <div style="text-align: right">
-    <img src="bits.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="0.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="1.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="2.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="3.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="4.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="5.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="6.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="7.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="8.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="9.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="10.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="11.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="12.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="13.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="14.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="15.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="16.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="17.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="18.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="19.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="20.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="21.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="22.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="23.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="24.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
+<img src="25.png" style="width: 400px; max-width: 100%; image-rendering: pixelated;">
 </div>
 </body>
 </html>
